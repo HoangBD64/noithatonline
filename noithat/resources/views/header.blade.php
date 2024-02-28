@@ -1,9 +1,9 @@
 	<header>
 		<!-- top Header -->
-		<div id="top-header">
+		<!-- <div id="top-header">
 			<div class="container">
 				<div class="pull-left">
-					<span>Chào mừng bạn đến với NOITHAT DESGIN!</span>
+				
 				</div>
 				<div class="pull-right">
 					<ul class="header-top-links">
@@ -26,7 +26,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- /top Header -->
 
 		<!-- header -->

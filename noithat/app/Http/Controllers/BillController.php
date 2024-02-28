@@ -21,12 +21,14 @@ class BillController extends Controller
     public function getChitiet(Request $id){
         $bill = Bill::where('id',$id->id)->first();
         $bill_detail = BillDetail::where('id_bill',$bill->id)->get();
+        
         return view('admin.hoadon_ban.chitietdon',compact('bill','bill_detail'));
     }
 
     public function getBan(Request $id){
        $customer = Customer::all();
         $bill = Bill::where('status','đã xử lý')->paginate(10);
+        $bill_detail = BillDetail::all();//cmt
         return view('admin.hoadon_ban.giao_hang_xong',compact('bill','bill_detail'));
     }
 
@@ -41,6 +43,7 @@ class BillController extends Controller
       public function getHuy(Request $id){
         $customer = Customer::all();
         $bill = Bill::where('status','đã hủy')->paginate(10);
+        $bill_detail = BillDetail::all();//cmt
         return view('admin.hoadon_ban.donhang_huy',compact('bill','bill_detail'));
     }
 
@@ -51,4 +54,4 @@ class BillController extends Controller
         $bill->save();
         return redirect()->back()->with('thongbao','Đã hủy hàng!');
     }
-}
+} 
